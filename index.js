@@ -11,9 +11,10 @@ const server = createServer(app);
 const io = new Server(server);
 
 // MongoDB Connection Setup
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/Chat_app')
-  .then(() => console.log('MongoDB connected'))
-  .catch(err => console.error('MongoDB connection error:', err));
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/Awesome_chat')
+  .then(() => console.log('Awesome_chat connected'))
+  .catch(err => console.error('Awesome_chat connection error:', err));
+
 
 // MongoDB Schemas
 const MessageSchema = new mongoose.Schema({
